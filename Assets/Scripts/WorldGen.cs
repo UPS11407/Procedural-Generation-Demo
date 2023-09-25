@@ -93,9 +93,9 @@ public class WorldGen : MonoBehaviour
     public Enums.BlockType DetermineBlockTesting(int x, int y, int z)
     {
         Random.InitState(seed);
-        var xOffset = ((Mathf.Sin(x * 3f) * 0.25) + (Mathf.Sin(x * 0.9f) * 1) + (Mathf.Sin(x * 0.2f) * 2)) * Random.Range(0.8f, 1.2f);
-        var zOffset = ((Mathf.Sin(z * 3f) * 0.25) + (Mathf.Sin(z * 0.9f) * 1) + (Mathf.Sin(z * 0.2f) * 2)) * Random.Range(0.8f, 1.2f);
-        double surfaceHeight = (worldSize.y - (worldSize.y / 4) + xOffset + zOffset) * Mathf.PerlinNoise(x, z) * 1.5;
+        var xOffset = ((Mathf.Sin(x * 0.9f) * 0.2f) + (Mathf.Sin(x * 0.2f) * 3) + (Mathf.Sin(x * 0.7f) * 0.9) + Mathf.Sin(x * 0.4f) + (Mathf.Sin(x * 0.2f) * 0.1f)) * Random.Range(0.8f, 1.2f);
+        var zOffset = ((Mathf.Sin(z * 0.4f) * 0.8f) + (Mathf.Sin(z * 0.7f) * 0.4f) + (Mathf.Sin(z * 0.2f) * 2) + (Mathf.Sin(z) * 0.7f) + (Mathf.Sin(z * 0.8f) * 0.6f)) * Random.Range(0.8f, 1.2f);
+        double surfaceHeight = (worldSize.y - (worldSize.y / 4) + xOffset + zOffset) * Mathf.PerlinNoise(x, z) * 1.5f;
         float perlinOffset = Random.Range(0.01f, 0.08f);
 
         if (y < surfaceHeight && y > surfaceHeight - 1)
