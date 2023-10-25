@@ -1,5 +1,6 @@
 # Procedural Generation Demo
- 
+ ![Demo Video](https://github.com/UPS11407/Procedural-Generation-Demo/assets/94105955/2dd2f777-f778-4aec-9b28-9bc80ca23ed8)
+
 This is a simple demo project for a procedural generation system in Unity.
 
 I was inspired by [this video](https://youtu.be/ob3VwY4JyzE) and decided to try my hand at this project. This is only a demo of what the generation system might look like, not a full game.
